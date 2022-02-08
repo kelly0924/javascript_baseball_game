@@ -24,7 +24,7 @@ function pickNumber(num){
    
 }
 //random 난 수 생성하기 
-window.onload=function(){
+window.onload=function(){ 
     ranNum1=Math.floor((Math.random()*9)+1);
     ranNum2=Math.floor((Math.random()*9)+1);
     ranNum3=Math.floor((Math.random()*9)+1);
@@ -40,6 +40,47 @@ function throwNumbers(){
 
     if(ranNum1 == userNum1 && ranNum2 == userNum2 && ranNum3 ==userNum3){
         document.getElementById("strike").innerHTML="strike!!";
+    }else if(ranNum1 == userNum1){
+        if(ranNum2 == userNum3 && ranNum3 == userNum2){
+            document.getElementById("strike").innerHTML="1s";
+            document.getElementById("ball").innerHTML="2 ball";
+        }else if(ranNum2 == userNum2 || ranNum3 == userNum3){
+            document.getElementById("strike").innerHTML="2s";
+        }else if(ranNum2 == userNum3 || ranNum3 == userNum2){
+            document.getElementById("strike").innerHTML="1s";
+            document.getElementById("ball").innerHTML="1 ball";
+        }else{
+            document.getElementById("strike").innerHTML="1s";
+        } 
+
+    }else if(ranNum2 == userNum2){
+        if(ranNum1 == userNum3 && ranNum3 == userNum1){
+            document.getElementById("strike").innerHTML="1s";
+            document.getElementById("ball").innerHTML="2 ball";
+        }else if(ranNum1 == userNum3 || ranNum3 == userNum1){
+            document.getElementById("strike").innerHTML="1s";
+            document.getElementById("ball").innerHTML="1 ball";
+        }else if(ranNum1 == userNum1 || ranNum3 == userNum3){
+            document.getElementById("strike").innerHTML="2s";
+        }else{
+            document.getElementById("strike").innerHTML="1s";
+        } 
+    }else if(ranNum3 == userNum3){
+        if(ranNum1 == userNum2 && ranNum2 == userNum1){
+            document.getElementById("strike").innerHTML="1s";
+            document.getElementById("ball").innerHTML="2 ball";
+        }else if(ranNum1 == userNum2 || ranNum2 == userNum1){
+            document.getElementById("strike").innerHTML="1s";
+            document.getElementById("ball").innerHTML="1 ball";
+        }else if(ranNum1 == userNum1 || ranNum2 == userNum2){
+            document.getElementById("strike").innerHTML="2s";
+        }else{
+            document.getElementById("strike").innerHTML="1s";
+        } 
+    }else if(ranNum1 == userNum2 && ranNum2 == userNum3 && ranNum3==userNum1){
+        document.getElementById("ball").innerHTML="3 ball";
+    }else{
+        alert("no ball no strike!");
     }
 
 }

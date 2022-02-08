@@ -1,15 +1,57 @@
-#input_num {
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 입력 영역
+#body_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+#ball_send_div {
+  background-color: darkgoldenrod;
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  text-align: center;
+}
+.botton_div_input {
   width: 50px;
   height: 30px;
+}
+#input_num {
+  width: 155px;
+  height: 40px;
   border: 1px solid black;
+  position: relative;
+  left: 20px;
+}
+
+#game_back_div {
+  width: 900px;
+  height: 500px;
+  background-color: green;
+}
+
+/*점수 나오는 css */
+#score {
+  width: 400px;
+  height: 100px;
+  border: 10px solid blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #ball {
   width: 100px;
-  height: 30px;
-  border: 1px solid black;
+  height: 100px;
+  text-align: center;
+  /* border: 1px solid black; */
 }
 #strike {
   width: 100px;
-  height: 30px;
-  border: 1px solid black;
+  height: 100px;
+  text-align: center;
+  /* border: 1px solid black; */
 }
