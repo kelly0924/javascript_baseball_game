@@ -80,6 +80,7 @@ body {
 /* 점수 나오는 css */
 #body_div_div {
   margin-top: 10px;
+  height: 350px;
 }
 #score_div {
   width: 300px;
@@ -113,6 +114,19 @@ body {
   height: 50px;
   text-align: center;
   /* border: 1px solid black; */
+  font-size: 40px;
+  font-weight: 900;
+}
+
+#win_out {
+  width: 300px;
+  height: 60px;
+  color: red;
+  position: relative;
+  left: 30px;
+  position: relative;
+  left: 240px;
+  bottom: 70px;
   font-size: 40px;
   font-weight: 900;
 }

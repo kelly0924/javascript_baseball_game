@@ -18,9 +18,9 @@
             <div id = "score_div">
                 <div id="strike"></div>
                 <div id="ball"></div>
-            </div>    
+            </div>  
+            <div id="win_out"></div>  
         </div>    
-        
         <div id="ball_send_div">
             <div id="input_num">
                 <img class="ball_send_div_img" src="img/baseball1.png">
@@ -49,7 +49,7 @@
                     <input class="botton_div_input" id="7" type="button" value="7" onclick="pickNumber(7)">
                     <input class="botton_div_input" id="8" type="button" value="8" onclick="pickNumber(8)">
                     <input class="botton_div_input" id="9" type="button" value="9" onclick="pickNumber(9)">
-                    <input id="delet_input" type="button" value="지우기">
+                    <input id="delet_input" type="button" value="지우기" onclick="deletBotton()">
                 </div>
                 <div>
                     <input id="start_input" type="button" value="맞추기" onclick="throwNumbers()">
@@ -60,6 +60,7 @@
     
         </div>
     </div>
+
     <script src="baseballGame.js">
     </script>
 </body>
