@@ -26,7 +26,13 @@ function pickNumber(num){
 window.onload=function(){ 
     ranNum1=Math.floor((Math.random()*9)+1);
     ranNum2=Math.floor((Math.random()*9)+1);
+    if(ranNum1 == ranNum2){//같은 수일 경우 다시 랜던 수 생성
+        ranNum2=Math.floor((Math.random()*9)+1);
+    }
     ranNum3=Math.floor((Math.random()*9)+1);
+    if(ranNum1 == ranNum3 || ranNum2 ==ranNum3){//3번째 수가 두번 째나 첫 번째 수와 같다면 다시 생성 하게 한다. 
+        ranNum3=Math.floor((Math.random()*9)+1);
+    }
     console.log(ranNum1,ranNum2,ranNum3);
 }
 //random 숫자와 사용자가 입력한 숫가 같은지를 보는 함수 
@@ -38,48 +44,50 @@ function throwNumbers(){
     console.log(userNum1,userNum2,userNum3);
 
     if(ranNum1 == userNum1 && ranNum2 == userNum2 && ranNum3 ==userNum3){
-        document.getElementById("strike").innerHTML="strike!!";
+        document.getElementById("strike").innerHTML="3 strike!!";
     }else if(ranNum1 == userNum1){
         if(ranNum2 == userNum3 && ranNum3 == userNum2){
-            document.getElementById("strike").innerHTML="1s";
+            document.getElementById("strike").innerHTML="1 strike";
             document.getElementById("ball").innerHTML="2 ball";
         }else if(ranNum2 == userNum2 || ranNum3 == userNum3){
-            document.getElementById("strike").innerHTML="2s";
+            document.getElementById("strike").innerHTML="2 strike";
         }else if(ranNum2 == userNum3 || ranNum3 == userNum2){
-            document.getElementById("strike").innerHTML="1s";
+            document.getElementById("strike").innerHTML="1 strike";
             document.getElementById("ball").innerHTML="1 ball";
         }else{
-            document.getElementById("strike").innerHTML="1s";
+            document.getElementById("strike").innerHTML="1 strike";
         } 
 
     }else if(ranNum2 == userNum2){
         if(ranNum1 == userNum3 && ranNum3 == userNum1){
-            document.getElementById("strike").innerHTML="1s";
+            document.getElementById("strike").innerHTML="1 strike";
             document.getElementById("ball").innerHTML="2 ball";
         }else if(ranNum1 == userNum3 || ranNum3 == userNum1){
-            document.getElementById("strike").innerHTML="1s";
+            document.getElementById("strike").innerHTML="1 strike";
             document.getElementById("ball").innerHTML="1 ball";
         }else if(ranNum1 == userNum1 || ranNum3 == userNum3){
-            document.getElementById("strike").innerHTML="2s";
+            document.getElementById("strike").innerHTML="2 strike";
         }else{
-            document.getElementById("strike").innerHTML="1s";
+            document.getElementById("strike").innerHTML="1 strike";
         } 
     }else if(ranNum3 == userNum3){
         if(ranNum1 == userNum2 && ranNum2 == userNum1){
-            document.getElementById("strike").innerHTML="1s";
+            document.getElementById("strike").innerHTML="1 strike";
             document.getElementById("ball").innerHTML="2 ball";
         }else if(ranNum1 == userNum2 || ranNum2 == userNum1){
-            document.getElementById("strike").innerHTML="1s";
+            document.getElementById("strike").innerHTML="1 strike";
             document.getElementById("ball").innerHTML="1 ball";
         }else if(ranNum1 == userNum1 || ranNum2 == userNum2){
-            document.getElementById("strike").innerHTML="2s";
+            document.getElementById("strike").innerHTML="2 strike";
         }else{
-            document.getElementById("strike").innerHTML="1s";
+            document.getElementById("strike").innerHTML="1 strike";
         } 
     }else if(ranNum1 == userNum2 && ranNum2 == userNum3 && ranNum3==userNum1){
         document.getElementById("ball").innerHTML="3 ball";
     }else{
-        alert("no ball no strike!");
+        document.getElementById("strike").innerHTML="no strike";
+        document.getElementById("ball").innerHTML="no ball";
+
     }
 
 }
