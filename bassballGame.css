@@ -1,0 +1,44 @@
+/* score css */
+#score {
+  width: 100%;
+  text-align: center;
+}
+#scoreImg {
+  width: 250px;
+  height: 250px;
+}
+#scoreTextBox {
+  width: 600px;
+  height: 200px;
+}
+#scoreH2 {
+  display: inline;
+  background-color: red;
+}
+
+/* num input */
+#inputNum {
+  display: flex;
+  justify-content: center;
+}
+.inputNumDiv {
+  width: 20%;
+}
+.inputNumDivImg {
+  width: 200px;
+  height: 200px;
+}
+#sectionTwoDivSelectNumDiv {
+  display: flex;
+  justify-content: center;
+  background-color: red;
+}
+.bottonDiv {
+  display: flex;
+  justify-content: center;
+  width: 900px;
+}
+.bottonDivInput {
+  width: 100px;
+  height: 70px;
+}
