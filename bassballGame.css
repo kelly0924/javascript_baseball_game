@@ -1,6 +1,39 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main {
+  width: 80%;
+}
+#winOut {
+  display: block;
+}
+#win {
+  display: none;
+  position: relative;
+  height: 40%;
+  text-align: center;
+  z-index: 2;
+  top: 500px;
+  left: 10%;
+}
+#out {
+  display: none;
+  position: relative;
+  text-align: center;
+  z-index: 2;
+  top: 500px;
+  left: 25%;
+}
+
 /* score css */
-#score {
+#sectionOneDiv {
   width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#score {
   text-align: center;
 }
 #scoreImg {
@@ -8,12 +41,15 @@
   height: 250px;
 }
 #scoreTextBox {
-  width: 600px;
+  width: 500px;
   height: 200px;
 }
 #scoreH2 {
   display: inline;
-  background-color: red;
+  position: relative;
+  text-align: center;
+  left: 400px;
+  bottom: 100px;
 }
 
 /* num input */
@@ -22,23 +58,37 @@
   justify-content: center;
 }
 .inputNumDiv {
+  display: flex;
+  justify-content: center;
   width: 20%;
 }
 .inputNumDivImg {
   width: 200px;
   height: 200px;
 }
+.inputNumCnt {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  top: 50px;
+  right: 125px;
+  font-size: 100px;
+  font-weight: 900;
+  text-align: center;
+}
+
 #sectionTwoDivSelectNumDiv {
   display: flex;
   justify-content: center;
-  background-color: red;
 }
 .bottonDiv {
   display: flex;
   justify-content: center;
-  width: 900px;
+  flex-wrap: wrap;
+  width: 300px;
 }
 .bottonDivInput {
   width: 100px;
   height: 70px;
+  border-radius: 10px;
 }

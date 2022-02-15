@@ -19,7 +19,7 @@ window.onload=function(){
     console.log(ranNum1,ranNum2,ranNum3);
 }
 
-function pickNumber(num){// 이벤트 함수는 함수 이름+ 무슨이벤트  pick 잘 안쓴다. 대신 select 를 쓴다. 
+function selectNumber(num){// 이벤트 함수는 함수 이름+ 무슨이벤트  pick 잘 안쓴다. 대신 select 를 쓴다. 
     var tmpNum=document.getElementById(num).value;
     var NumONe=document.getElementById("inputNum1");
     var NumTwo=document.getElementById("inputNum2");
@@ -37,16 +37,17 @@ function pickNumber(num){// 이벤트 함수는 함수 이름+ 무슨이벤트  
     }
 }
 //random 숫자와 사용자가 입력한 숫가 같은지를 보는 함수 
-function throwNumbers(){//함수 이름  지금 처럼 하면 알아 보지 않는다. 
-    var tmpInt=parseInt(resultNum);
-    userNum1=Math.floor(tmpInt/100);
-    userNum2=Math.floor((tmpInt/10)%10);
-    userNum3=Math.floor((tmpInt%100)%10);
+function compareNumbers(){//함수 이름  지금 처럼 하면 알아 보지 않는다. 
+
+    userNum1=userInputNum[0];
+    userNum2=userInputNum[1];
+    userNum3=userInputNum[2];
     console.log(userNum1,userNum2,userNum3);
 
     if(ranNum1 == userNum1 && ranNum2 == userNum2 && ranNum3 ==userNum3){
         document.getElementById("scoreH2").innerHTML="3 strike!!";
-        // document.getElementById("win_out").innerHTML="win! win! win! ";
+        document.getElementById("win").style.display="block";
+
     }else if(ranNum1 == userNum1){
         if(ranNum2 == userNum3 && ranNum3 == userNum2){
             document.getElementById("scoreH2").innerHTML="1 strike 2 ball";
@@ -82,18 +83,18 @@ function throwNumbers(){//함수 이름  지금 처럼 하면 알아 보지 않�
         document.getElementById("scoreH2").innerHTML="3 ball";
     }else{
         document.getElementById("scoreH2").innerHTML="no strike no ball";
-        document.getElementById("scoreH2").innerHTML="no ball";
-        // document.getElementById("win_out").innerHTML="you are out!";
-        
-       
+        document.getElementById("out").style.display="block";
     }
     // 비워 주는 로직 3줄 추가  resultNum="" 추가 변수 3개로 만드는 것을 좋다. 
 
 }
-// function deletBotton(){
-//     document.getElementById("input_num1").innerHTML=" ";
-//     document.getElementById("input_num2").innerHTML=" ";
-//     document.getElementById("input_num3").innerHTML=" ";
-//     resultNum=" ";
+function deletBotton(){
+    document.getElementById("inputNum1").innerHTML=" ";
+    document.getElementById("inputNum2").innerHTML=" ";
+    document.getElementById("inputNum3").innerHTML=" ";
+    userNum1 = 0;
+    userNum2 = 0;
+    userNum3 = 0;
+    cnt=0;
     
-// }
+}

@@ -7,60 +7,57 @@
     <title>baseball</title>
 </head>
 <body>
-    
-    <section id="sectionOne">
-        <div id="sectionOneDiv">
-            <div id="score">
-                <img id="scoreImg" src="img/score.png">
-                <h2 id="scoreH2">scor ....</h2>
-                <img id="scoreTextBox" src="img/textbox.png">
-            </div>
-            <!-- <div id = "scoreDiv">
-                <h2 id="scoreH2"></h2>
-            </div>   -->
-            <div id="winOut"></div>  
-        </div>    
+    <main id="main">
         
-    </section>
-    
-    <section id="sectionTwo">
-        <div id="sectionTwoDiv">
-            <div id="inputNum">
-                <!-- 돔 구조 이렇게 짜면 안된다. div 안에 img 가 있어야 한다.  -->
-                <div class="inputNumDiv"> 
-                    <img class="inputNumDivImg" src="img/baseball1.png">
-                    <div id="inputNum1">
+        <img id="win" src="img/winImg.png">
+        <img id="out" src="img/outImg.png">
+   
+        <section id="sectionOne">
+            <div id="sectionOneDiv">
+                <div id="score">
+                    <img id="scoreImg" src="img/score.png">
+                    <h1 id="scoreH2">scor ....</h1>
+                    <img id="scoreTextBox" src="img/textbox.png">
+                </div>
+            </div>    
+            
+        </section>
+        
+        <section id="sectionTwo">
+            <div id="sectionTwoDiv">
+                <div id="inputNum">
+                    <!-- 돔 구조 이렇게 짜면 안된다. div 안에 img 가 있어야 한다.  -->
+                    <div class="inputNumDiv"> 
+                        <img class="inputNumDivImg" src="img/baseball1.png">
+                        <div id="inputNum1" class="inputNumCnt"></div>
+                    </div>
+                    <div class="inputNumDiv"> 
+                        <img class="inputNumDivImg" src="img/baseball1.png">
+                        <div id="inputNum2" class="inputNumCnt"></div>
+                    </div>
+                    <div class="inputNumDiv"> 
+                        <img class="inputNumDivImg" src="img/baseball1.png">
+                        <div id="inputNum3" class="inputNumCnt"></div>
                     </div>
                 </div>
-                <div class="inputNumDiv"> 
-                    <img class="inputNumDivImg" src="img/baseball1.png">
-                    <div id="inputNum2"></div>
-                </div>
-                <div class="inputNumDiv"> 
-                    <img class="inputNumDivImg" src="img/baseball1.png">
-                    <div id="inputNum3"></div>
-                </div>
-            </div>
 
-            <div id="sectionTwoDivSelectNumDiv">
-                <div class="bottonDiv">
-                    <input class="bottonDivInput" id="1" type="button" value="1" onclick="pickNumber(1)">
-                    <input class="bottonDivInput" id="2" type="button" value="2" onclick="pickNumber(2)">
-                    <input class="bottonDivInput" id="3" type="button" value="3" onclick="pickNumber(3)">
-                    <input class="bottonDivInput" id="4" type="button" value="4" onclick="pickNumber(4)">
-                    <input class="bottonDivInput" id="5" type="button" value="5" onclick="pickNumber(5)">
-                    <input class="bottonDivInput" id="6" type="button" value="6" onclick="pickNumber(6)">
-                    <input class="bottonDivInput" id="7" type="button" value="7" onclick="pickNumber(7)">
-                    <input class="bottonDivInput" id="8" type="button" value="8" onclick="pickNumber(8)">
-                    <input class="bottonDivInput" id="9" type="button" value="9" onclick="pickNumber(9)">
-                    <input class="bottonDivInput" id="deletInput" type="button" value="지우기" onclick="deletBotton()">
+                <div id="sectionTwoDivSelectNumDiv">
+                    <div class="bottonDiv">
+                        <input class="bottonDivInput" id="1" type="button" value="1" onclick="selectNumber(1)">
+                        <input class="bottonDivInput" id="2" type="button" value="2" onclick="selectNumber(2)">
+                        <input class="bottonDivInput" id="3" type="button" value="3" onclick="selectNumber(3)">
+                        <input class="bottonDivInput" id="4" type="button" value="4" onclick="selectNumber(4)">
+                        <input class="bottonDivInput" id="5" type="button" value="5" onclick="selectNumber(5)">
+                        <input class="bottonDivInput" id="6" type="button" value="6" onclick="selectNumber(6)">
+                        <input class="bottonDivInput" id="7" type="button" value="7" onclick="selectNumber(7)">
+                        <input class="bottonDivInput" id="8" type="button" value="8" onclick="selectNumber(8)">
+                        <input class="bottonDivInput" id="9" type="button" value="9" onclick="selectNumber(9)">
+                        <input class="bottonDivInput" id="deletInput" type="button" value="지우기" onclick="deletBotton()">
+                        <input class="bottonDivInput" id="start_input" type="button" value="맞추기" onclick="compareNumbers()">
+                    </div>
                 </div>
-                <div>
-                    <input class="bottonDivInput" id="start_input" type="button" value="맞추기" onclick="throwNumbers()">
-                    <!-- <input id="delet_input" type="button" value="지우기"> -->
-                </div>
-            </div>
-    </section>
+        </section>
+    </main>
     <script src="baseballGame.js">
     </script>
 </body>
